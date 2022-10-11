@@ -1,1 +1,3 @@
-export const Escena = ({ param }) => <p>{param}</p>;
+import { Parag } from './styled';
+
+export const Escena = ({ param }) => <Parag>{param}</Parag>;
