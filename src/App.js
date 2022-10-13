@@ -1,12 +1,14 @@
 import { Escena } from './components/escena/Escena';
 import { Button } from './components/button/Button';
 import Welcome from './components/welcome/Welcome';
-import textos from './components/escena/textos.json';
+import text from './components/escena/text';
 import { useState } from 'react';
+import { createGlobalStyle } from 'styled-components';
+
 
 function App() {
 
-  const firstElem = 1, lastElem = textos.length;
+  const firstElem = 1, lastElem = text.length;
   const [active, setActive] = useState(firstElem);
 
   const next = () => active === 4 ? setActive(firstElem) : setActive(active + 1);
@@ -14,6 +16,13 @@ function App() {
 
   const [welcome, setWelcome] = useState(true);
   const start = () => setWelcome(false);
+
+  const GlobalStyle = createGlobalStyle`
+    body {
+      background: url('${text[active - 1].img}') no-repeat center;
+      background-size: cover;
+    }
+`;
 
   return (
     <div>
@@ -25,9 +34,10 @@ function App() {
           </div>
           :
           <div>
+            <GlobalStyle />
             <Button param='Anterior' click={prev} />
             <Button param='Següent' click={next} />
-            <Escena param={textos} state={active} />
+            <Escena param={text} state={active} />
           </div>
       }
     </div >
