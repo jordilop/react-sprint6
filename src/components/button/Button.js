@@ -1,3 +1,3 @@
 import { StyledButton } from './styled';
 
-export const Button = ({ param, click }) => <StyledButton onClick={click}>{param}</StyledButton>;
+export const Button = ({ param, click, classStyle }) => <StyledButton className={classStyle} onClick={click}>{param}</StyledButton>;

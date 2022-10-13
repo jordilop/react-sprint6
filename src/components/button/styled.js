@@ -11,7 +11,13 @@ export const StyledButton = styled.button`
     &:hover {
         background-color: grey;
     }
+
     &:active {
         background-color: lightgrey;
+    }
+
+    &.welcome {
+        width: 20%;
+        margin: 1rem;    
     }
 `;
