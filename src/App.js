@@ -1,7 +1,7 @@
-import { Escena } from './components/escena/Escena';
-import { Button } from './components/button/Button';
-import Welcome from './components/welcome/Welcome';
-import text from './components/escena/text';
+import { Escena } from './components/Escena/Escena';
+import { Button } from './components/Button/Button';
+import Welcome from './components/Welcome/Welcome';
+import text from './components/Escena/text';
 import { useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 
